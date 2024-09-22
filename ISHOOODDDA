@@ -261,15 +261,15 @@ function Kavo.CreateLib(kavName, themeList)
 	coverup.Size = UDim2.new(0, 525, 0, 7)
 
 
-        local CloseGui = Instance.new("ScreenGui")
+        local ScreenGui = Instance.new("ScreenGui")
 local frame = Instance.new("Frame")
 local dropitem = Instance.new("TextButton")
 local image = Instance.new("ImageLabel")
 
-CloseGui.Parent = game.CoreGui
+ScreenGui.Parent = game.CoreGui
 
 frame.Name = "frame"
-frame.Parent = CloseGui
+frame.Parent = ScreenGui
 frame.BackgroundColor3 = Color3.new(90, 70, 3)
 frame.Position = UDim2.new(0.00801973976, 0, 0.423832953, 0)
 frame.Size = UDim2.new(0, 0, 0, 0)
@@ -299,12 +299,14 @@ image.Image = "rbxassetid://129988714047595"
 
 local clickCount = 0
 
-dropitem. MouseButton1Click:connect(function()
+dropitem.MouseButton1Click:connect(function()
     clickCount = clickCount + 1
     if clickCount == 1 then
         game.CoreGui.AvtorHub.Main.Visible = false
+        
     elseif clickCount == 2 then
         game.CoreGui.AvtorHub.Main.Visible = true
+        
         clickCount = 0 
     end
 end)
@@ -375,8 +377,7 @@ end)
 			Position = UDim2.new(0, Main.AbsolutePosition.X + (Main.AbsoluteSize.X / 2), 0, Main.AbsolutePosition.Y + (Main.AbsoluteSize.Y / 2))
 		}):Play()
 		wait(1)
-		game.CoreGui.AvtorHub:Destroy()
-                game.CoteGui.
+		ScreenGui:Destroy()
 	end)
 
 	MainSide.Name = "MainSide"
