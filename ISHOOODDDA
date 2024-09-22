@@ -378,7 +378,7 @@ end)
 		}):Play()
 		wait(1)
 		game.CoreGui.AvtorHub:Destroy()
-                game.CoteGui.
+                
 	end)
 
 	MainSide.Name = "MainSide"
