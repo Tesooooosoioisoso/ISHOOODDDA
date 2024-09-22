@@ -235,7 +235,7 @@ function Kavo.CreateLib(kavName, themeList)
 	Main.Parent = ScreenGui
 	Main.BackgroundColor3 = themeList.Background
 	Main.ClipsDescendants = true
-	Main.Position = UDim2.new(0.336503863, 0, 0.275485456, 0)
+	Main.Position = UDim2.new(0.3, 0, 0.2, 0)
 	Main.Size = UDim2.new(0, 525, 0, 318)
 
 	MainCorner.CornerRadius = UDim.new(0, 4)
@@ -258,6 +258,57 @@ function Kavo.CreateLib(kavName, themeList)
 	coverup.BorderSizePixel = 0
 	coverup.Position = UDim2.new(0, 0, 0.758620679, 0)
 	coverup.Size = UDim2.new(0, 525, 0, 7)
+
+
+        local ScreenGui = Instance.new("ScreenGui")
+local frame = Instance.new("Frame")
+local dropitem = Instance.new("TextButton")
+local image = Instance.new("ImageLabel")
+
+ScreenGui.Parent = game.CoreGui
+
+frame.Name = "frame"
+frame.Parent = ScreenGui
+frame.BackgroundColor3 = Color3.new(90, 70, 3)
+frame.Position = UDim2.new(0.00801973976, 0, 0.423832953, 0)
+frame.Size = UDim2.new(0, 0, 0, 0)
+frame.Active = true
+frame.Draggable = true
+frame.BackgroundTransparency = 0.10 
+
+dropitem.Name = "Sigma"
+dropitem.Parent = frame
+dropitem.BackgroundColor3 = Color3.new(0, 0, 0)
+dropitem.BackgroundTransparency = 0
+dropitem.Size = UDim2.new(0, 50, 0, 48)
+dropitem.Font = Enum.Font.GothamBold
+dropitem.Text = ""
+dropitem.TextColor3 = Color3.new(1, 1, 220)
+dropitem.TextSize = 18
+dropitem.TextWrapped = true
+dropitem.Active = true
+dropitem.Draggable = true
+
+image.Name = "Image"
+image.Parent = dropitem
+image.BackgroundTransparency = 1
+image.Size = UDim2.new(1, 0, 1, 0)
+image.Image = "rbxassetid://3926305904" 
+
+local clickCount = 0
+
+dropitem.MouseButton1Click:connect(function()
+    clickCount = clickCount + 1
+    if clickCount == 1 then
+        game.CoreGui.AvtorHub.Main.Visible = false
+        
+    elseif clickCount == 2 then
+        game.CoreGui.AvtorHub.Main.Visible = true
+        
+        clickCount = 0 
+    end
+end)
+
 
 	title.Name = "title"
 	title.Parent = MainHeader
@@ -304,29 +355,6 @@ function Kavo.CreateLib(kavName, themeList)
 	end)
 	
 	Kavo.DraggingEnabled(frame, frame)
-	
-	tab.Name = "tab"
-	tab.Parent = MainHeader
-	tab.BackgroundTransparency = 1.000
-	tab.Position = UDim2.new(0.900999988, 0, 0.137999997, 0)
-	tab.Size = UDim2.new(0, 21, 0, 21)
-	tab.ZIndex = 2
-	tab.Image = "rbxassetid://3926305904"
-	tab.ImageRectOffset = Vector2.new(464.5, 4)
-	tab.ImageRectSize = Vector2.new(34, 34)
-	tab.MouseButton1Click:Connect(function()
-		game.TweenService:Create(Main, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
-			Size = UDim2.new(0,0,0,0),
-		}):Play()
-		game.TweenService:Create(frame, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
-			Position = UDim2.new(0, Main.AbsolutePosition.X, 0, Main.AbsolutePosition.Y)
-		}):Play()
-		wait(0.2)
-		frame.Visible = true
-		game.TweenService:Create(frame, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
-			Size = UDim2.new(0,60,0,60),
-		}):Play()
-	end)
 
 	close.Name = "close"
 	close.Parent = MainHeader
