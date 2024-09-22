@@ -261,7 +261,7 @@ function Kavo.CreateLib(kavName, themeList)
 	coverup.Size = UDim2.new(0, 525, 0, 7)
 
 
-  local Closer = Instance.new("ScreenGui")
+  local ScreenGui = Instance.new("ScreenGui")
 local frame = Instance.new("Frame")
 local dropitem = Instance.new("TextButton")
 local image = Instance.new("ImageLabel")
@@ -269,7 +269,7 @@ local image = Instance.new("ImageLabel")
 ScreenGui.Parent = game.CoreGui
 
 frame.Name = "frame"
-frame.Parent = Closer
+frame.Parent = ScreenGui
 frame.BackgroundColor3 = Color3.new(90, 70, 3)
 frame.Position = UDim2.new(0.00801973976, 0, 0.423832953, 0)
 frame.Size = UDim2.new(0, 0, 0, 0)
