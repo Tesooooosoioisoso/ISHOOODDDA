@@ -293,7 +293,7 @@ image.Name = "Image"
 image.Parent = dropitem
 image.BackgroundTransparency = 1
 image.Size = UDim2.new(1, 0, 1, 0)
-image.Image = "rbxassetid://3926305904" 
+image.Image = "rbxassetid://129988714047595" 
 
 local clickCount = 0
 
