@@ -288,6 +288,7 @@ dropitem.TextSize = 18
 dropitem.TextWrapped = true
 dropitem.Active = true
 dropitem.Draggable = true
+dropitem.BackgroundTransparency = 0.99
 
 image.Name = "Image"
 image.Parent = dropitem
