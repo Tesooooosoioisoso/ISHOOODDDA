@@ -416,7 +416,7 @@ end)
 	pages.BackgroundTransparency = 1.000
 	pages.BorderSizePixel = 0
 	pages.Position = UDim2.new(0.299047589, 0, 0.122641519, 0)
-	pages.Size = UDim2.new(0, 460, 0, 369)
+	pages.Size = UDim2.new(0, 760, 0, 669)
 	pages.Image = "rbxassetid://77605889206767"
 
 	Pages.Name = "Pages"
